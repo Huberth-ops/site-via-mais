@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "VIA+ Soluções para Locação e Entrega",
+    "search_aliases": ["Via Mais", "VIA Mais", "VIA+", "Via+ Soluções"],
+    "slogan": "Inteligência para alugar, tranquilidade para entregar.",
+    "category": "Organização para busca e preparação de entrega de imóveis"
+  },
+  "business": {
+    "description": "A VIA+ organiza opções públicas de imóveis para locação e orienta presencialmente a preparação preventiva para entrega de imóveis alugados.",
+    "main_services": [
+      "Pesquisa orientada de imóveis para locação",
+      "Consultoria para entrega de imóvel",
+      "Pré-vistoria orientativa",
+      "Pré-vistoria com assessoria",
+      "Relatório de Pendências e Reparos Recomendados"
+    ],
+    "service_area": {
+      "city": "Montes Claros",
+      "state": "Minas Gerais",
+      "country": "Brasil"
+    },
+    "service_mode": "Presencial"
+  },
+  "limitations": [
+    "A empresa não intermedeia ou negocia locações.",
+    "A empresa não substitui corretores ou imobiliárias.",
+    "A empresa não realiza a vistoria oficial da imobiliária.",
+    "A empresa não emite laudo técnico ou pericial.",
+    "A empresa não garante aprovação na vistoria.",
+    "O relatório emitido na pré-vistoria é orientativo e preventivo."
+  ],
+  "contact": {
+    "primary_channel": "WhatsApp",
+    "url": "https://wa.me/5538999079952"
+  },
+  "audience": [
+    "Pessoas buscando imóvel para locação",
+    "Famílias procurando imóvel residencial",
+    "Empresas buscando imóvel comercial",
+    "Inquilinos em processo de entrega de imóvel",
+    "Imobiliárias e corretores parceiros"
+  ]
+}
