@@ -30,7 +30,24 @@ export type SiteConfig = {
 
 export type DelayCalculation = {
   monthlyRent: number;
+  monthlyCondo: number;
+  annualIptu: number;
+  annualTlrs: number;
   days: number;
   dailyCost: number;
+  rentCost: number;
+  condoCost: number;
+  iptuCost: number;
+  tlrsCost: number;
+  estimatedCost: number;
+};
+
+export type SearchCostCalculation = {
+  hourlyCost: number;
+  hours: number;
+  visits: number;
+  transportPerVisit: number;
+  laborCost: number;
+  transportCost: number;
   estimatedCost: number;
 };

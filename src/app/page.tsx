@@ -10,6 +10,7 @@ import {
 import { BrandLogo } from "@/components/brand-logo";
 import { DelaySimulator } from "@/components/delay-simulator";
 import { LeadQualifier } from "@/components/lead-qualifier";
+import { SearchCostCalculator } from "@/components/search-cost-calculator";
 import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 const attentionPoints = [
@@ -242,28 +243,7 @@ export default function Home() {
                 Explicar o imóvel que procuro <ArrowIcon />
               </a>
             </div>
-            <div className="cost-comparison">
-              <p className="comparison-label">Custo operacional da busca</p>
-              <h3>Tempo também entra na conta</h3>
-              <div className="bar-row">
-                <span>Pesquisa dispersa</span>
-                <div className="bar-track"><i style={{ width: "88%" }} /></div>
-                <small>Anúncios, deslocamentos e visitas improdutivas</small>
-              </div>
-              <div className="bar-row">
-                <span>Pesquisa organizada</span>
-                <div className="bar-track accent"><i style={{ width: "48%" }} /></div>
-                <small>Critérios, agrupamento e comparação inicial</small>
-              </div>
-              <div className="example-box">
-                <b>Exemplo ilustrativo</b>
-                <span>20 horas × R$ 40/h = R$ 800 em tempo operacional</span>
-              </div>
-              <p className="legal-note">
-                Não representa economia garantida. Valores servem apenas para
-                visualizar custos indiretos de tempo e produtividade.
-              </p>
-            </div>
+            <SearchCostCalculator />
           </div>
         </section>
 

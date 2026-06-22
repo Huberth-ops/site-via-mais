@@ -16,6 +16,8 @@ export function LeadQualifier() {
   const [location, setLocation] = useState("");
   const [budget, setBudget] = useState("");
   const [date, setDate] = useState("");
+  const [description, setDescription] = useState("");
+  const [realEstateAgency, setRealEstateAgency] = useState("");
 
   const href = useMemo(() => {
     const details =
@@ -25,16 +27,26 @@ export function LeadQualifier() {
             `Tipo: ${propertyType}.`,
             `Região ou bairro: ${location.trim() || "a definir"}.`,
             `Faixa de aluguel: ${budget.trim() || "a definir"}.`,
+            `Descrição do imóvel desejado: ${description.trim() || "a definir"}.`,
           ]
         : [
             "Olá, quero ajuda da VIA+ para preparar a entrega de um imóvel.",
             `Tipo: ${propertyType}.`,
             `Endereço, bairro ou região: ${location.trim() || "a definir"}.`,
             `Previsão de vistoria ou entrega: ${date || "a definir"}.`,
+            `Imobiliária ou responsável: ${realEstateAgency.trim() || "a definir"}.`,
           ];
 
     return whatsappUrl(details.join("\n"));
-  }, [budget, date, intent, location, propertyType]);
+  }, [
+    budget,
+    date,
+    description,
+    intent,
+    location,
+    propertyType,
+    realEstateAgency,
+  ]);
 
   return (
     <div className="hero-lead-card">
@@ -110,25 +122,47 @@ export function LeadQualifier() {
         </label>
 
         {intent === "search" ? (
-          <label>
-            <span>Faixa de aluguel</span>
-            <input
-              type="text"
-              value={budget}
-              onChange={(event) => setBudget(event.target.value)}
-              placeholder="Ex.: até R$ 2.500"
-              inputMode="decimal"
-            />
-          </label>
+          <>
+            <label>
+              <span>Faixa de aluguel</span>
+              <input
+                type="text"
+                value={budget}
+                onChange={(event) => setBudget(event.target.value)}
+                placeholder="Ex.: até R$ 2.500"
+                inputMode="decimal"
+              />
+            </label>
+            <label>
+              <span>Breve descrição do imóvel desejado</span>
+              <textarea
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
+                placeholder="Ex.: 3 quartos, 1 suíte, garagem e próximo a escolas"
+                rows={3}
+              />
+            </label>
+          </>
         ) : (
-          <label>
-            <span>Previsão de vistoria ou entrega</span>
-            <input
-              type="date"
-              value={date}
-              onChange={(event) => setDate(event.target.value)}
-            />
-          </label>
+          <>
+            <label>
+              <span>Previsão de vistoria ou entrega</span>
+              <input
+                type="date"
+                value={date}
+                onChange={(event) => setDate(event.target.value)}
+              />
+            </label>
+            <label>
+              <span>Imobiliária ou responsável pela locação</span>
+              <input
+                type="text"
+                value={realEstateAgency}
+                onChange={(event) => setRealEstateAgency(event.target.value)}
+                placeholder="Ex.: nome da imobiliária, proprietário ou sem imobiliária"
+              />
+            </label>
+          </>
         )}
       </div>
 

@@ -1,12 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 92" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 92" role="img" aria-labelledby="title desc">
   <title id="title">VIA+</title>
   <desc id="desc">Marca VIA+ com símbolo de imóvel em verde-petróleo.</desc>
   <g fill="none" stroke-linecap="square" stroke-width="12">
     <path d="M18 20 48 70 78 20" stroke="#1f2326"/>
     <path d="M101 20v50" stroke="#1f2326"/>
     <path d="M130 70 166 18l36 52" stroke="#0d6b68"/>
-    <path d="M151 54h30M166 40v29" stroke="#0d6b68" stroke-width="6"/>
     <path d="M226 27h45M248.5 4.5v45" stroke="#0d6b68"/>
   </g>
-  <text x="304" y="47" fill="#1f2326" font-family="Montserrat,Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="1">VIA+</text>
+  <g fill="#0d6b68">
+    <rect x="151" y="48" width="11" height="11"/>
+    <rect x="170" y="48" width="11" height="11"/>
+    <rect x="151" y="65" width="11" height="11"/>
+    <rect x="170" y="65" width="11" height="11"/>
+  </g>
 </svg>

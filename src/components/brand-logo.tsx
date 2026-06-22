@@ -21,8 +21,13 @@ export function BrandLogo({
           <path d="M18 20 48 70 78 20" stroke={primary} />
           <path d="M101 20v50" stroke={primary} />
           <path d="M130 70 166 18l36 52" stroke={accent} />
-          <path d="M151 54h30M166 40v29" stroke={accent} strokeWidth="6" />
           <path d="M226 27h45M248.5 4.5v45" stroke={accent} />
+        </g>
+        <g fill={accent}>
+          <rect x="151" y="48" width="11" height="11" />
+          <rect x="170" y="48" width="11" height="11" />
+          <rect x="151" y="65" width="11" height="11" />
+          <rect x="170" y="65" width="11" height="11" />
         </g>
       </svg>
     </span>
