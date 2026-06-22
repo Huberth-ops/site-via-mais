@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
   country: "Brasil",
   whatsapp: "5538999079952",
   whatsappDisplay: "(38) 99907-9952",
-  siteUrl: rawSiteUrl.replace(/\/$/, ""),
+  siteUrl: rawSiteUrl.trim().replace(/\/$/, ""),
   services: [
     {
       id: "pesquisa",
