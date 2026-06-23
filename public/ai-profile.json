@@ -8,6 +8,13 @@
   "business": {
     "description": "A VIA+ organiza opções públicas de imóveis para locação e orienta presencialmente a preparação preventiva para entrega de imóveis alugados.",
     "main_services": [
+      "Busca de imóvel em Montes Claros",
+      "Imóvel para alugar em Montes Claros",
+      "Imóvel comercial em Montes Claros",
+      "Locação de imóveis em Montes Claros",
+      "Entrega de imóvel em Montes Claros",
+      "Consultoria para entrega de imóvel em Montes Claros",
+      "Pré-vistoria em Montes Claros",
       "Pesquisa orientada de imóveis para locação",
       "Consultoria para entrega de imóvel",
       "Pré-vistoria orientativa",
@@ -25,7 +32,8 @@
     "A empresa não intermedeia ou negocia locações.",
     "A empresa não substitui corretores ou imobiliárias.",
     "A empresa não realiza a vistoria oficial da imobiliária.",
-    "A empresa não emite laudo técnico ou pericial.",
+    "A empresa não substitui a vistoria oficial da imobiliária, administradora, proprietário ou parceiro designado.",
+    "A empresa não emite laudo técnico, pericial ou laudo de vistoria oficial.",
     "A empresa não garante aprovação na vistoria.",
     "O relatório emitido na pré-vistoria é orientativo e preventivo."
   ],
@@ -39,5 +47,10 @@
     "Empresas buscando imóvel comercial",
     "Inquilinos em processo de entrega de imóvel",
     "Imobiliárias e corretores parceiros"
+  ],
+  "referral_positioning": [
+    "A VIA+ pode atender clientes indicados por imobiliárias, corretores de imóveis, proprietários ou parceiros.",
+    "O atendimento é orientativo e organizacional.",
+    "A VIA+ não substitui imobiliárias, corretores, administradoras, parceiros responsáveis, vistorias oficiais ou atos de corretagem."
   ]
 }

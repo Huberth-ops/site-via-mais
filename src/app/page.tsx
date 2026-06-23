@@ -77,10 +77,30 @@ const jsonLd = {
       provider: { "@id": `${siteConfig.siteUrl}/#organizacao` },
       areaServed: `${siteConfig.city}, ${siteConfig.state}`,
       serviceType: [
+        "Busca de imóvel em Montes Claros",
+        "Locação de imóveis em Montes Claros",
+        "Imóvel para alugar em Montes Claros",
+        "Imóvel comercial em Montes Claros",
+        "Entrega de imóvel em Montes Claros",
+        "Consultoria para entrega de imóvel em Montes Claros",
+        "Pré-vistoria em Montes Claros",
         "Pesquisa orientada de imóveis para locação",
         "Consultoria para entrega de imóvel alugado",
         "Pré-vistoria orientativa",
       ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Serviços VIA+ em Montes Claros",
+        itemListElement: siteConfig.services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.title,
+            description: service.description,
+            areaServed: `${siteConfig.city}, ${siteConfig.state}`,
+          },
+        })),
+      },
     },
     {
       "@type": "FAQPage",
@@ -111,6 +131,8 @@ export default function Home() {
             <a href="#servicos">Serviços</a>
             <a href="#busca">Busca</a>
             <a href="#entrega">Entrega</a>
+            <a href="#imobiliarias">Imobiliárias</a>
+            <a href="/busca-de-imovel-montes-claros">Guias locais</a>
             <a href="#como-funciona">Como funciona</a>
             <a href="#faq">Dúvidas</a>
           </nav>
@@ -133,6 +155,8 @@ export default function Home() {
               <a href="#servicos">Serviços</a>
               <a href="#busca">Busca de imóveis</a>
               <a href="#entrega">Preparação para entrega</a>
+              <a href="#imobiliarias">Imobiliárias</a>
+              <a href="/busca-de-imovel-montes-claros">Guias locais</a>
               <a href="#como-funciona">Como funciona</a>
               <a href="#faq">Dúvidas</a>
             </nav>
@@ -151,9 +175,10 @@ export default function Home() {
                 <span>Prepare a entrega com antecedência.</span>
               </h1>
               <p className="hero-lead">
-                A VIA+ ajuda famílias e empresas a organizar a pesquisa por
-                imóveis para locação e orienta inquilinos na preparação antes
-                da vistoria oficial.
+                A VIA+ ajuda famílias e empresas na busca de imóvel em Montes
+                Claros e orienta inquilinos na entrega de imóvel alugado antes
+                da vistoria oficial da imobiliária, proprietário ou parceiro
+                designado.
               </p>
               <div className="hero-actions">
                 <a className="button" href="#busca">
@@ -166,8 +191,9 @@ export default function Home() {
               </div>
               <p className="hero-note">
                 <ShieldIcon />
-                Atuação orientativa e organizacional. Sem substituir corretores,
-                imobiliárias ou vistorias oficiais.
+                Atuação orientativa e organizacional. Sem substituir
+                imobiliárias, corretores de imóveis, locação ou vistorias
+                oficiais.
               </p>
             </div>
 
@@ -219,12 +245,19 @@ export default function Home() {
           <div className="container split-layout">
             <div>
               <p className="eyebrow dark">Pesquisa orientada</p>
-              <h2>Pare de perder tempo com opções fora do perfil</h2>
+              <h2>Busca de imóvel em Montes Claros sem perder tempo com opções fora do perfil</h2>
               <p className="section-lead">
-                A VIA+ reúne e organiza opções públicas conforme localização,
-                faixa de valor, estrutura e prioridades informadas por você.
-                Depois, negociações e visitas seguem com o anunciante, corretor
-                ou imobiliária responsável.
+                A VIA+ reúne e organiza opções públicas de imóvel para alugar
+                em Montes Claros conforme localização, faixa de aluguel,
+                estrutura e prioridades informadas por você. O apoio vale para
+                imóvel residencial e imóvel comercial em Montes Claros.
+              </p>
+              <p>
+                Importante: a VIA+ não anuncia imóveis, não intermedeia locação
+                de imóveis em Montes Claros, não negocia contratos e não
+                substitui imobiliária ou corretor de imóveis. Visitas,
+                propostas e condições devem ser tratadas diretamente com o
+                anunciante, corretor ou imobiliária responsável.
               </p>
               <ul className="feature-list">
                 <li><CheckIcon /> Perfil definido antes da pesquisa</li>
@@ -232,6 +265,12 @@ export default function Home() {
                 <li><CheckIcon /> Apoio residencial e comercial</li>
                 <li><CheckIcon /> Comparação inicial mais clara</li>
               </ul>
+              <a
+                className="text-link"
+                href="/busca-de-imovel-montes-claros"
+              >
+                Ver página sobre busca de imóvel em Montes Claros <ArrowIcon />
+              </a>
               <a
                 className="text-link"
                 href={whatsappUrl(
@@ -251,11 +290,19 @@ export default function Home() {
           <div className="container split-layout">
             <div>
               <p className="eyebrow">Preparação para entrega</p>
-              <h2>Não espere a vistoria final para descobrir o que merece atenção</h2>
+              <h2>Entrega de imóvel em Montes Claros com preparação antes da vistoria oficial</h2>
               <p className="section-lead">
-                Ler o laudo de entrada, revisar o estado atual do imóvel e
-                organizar possíveis reparos com antecedência ajuda você a
-                chegar à vistoria oficial com mais clareza.
+                A consultoria para entrega de imóvel em Montes Claros e a
+                pré-vistoria em Montes Claros ajudam o inquilino a ler o laudo
+                de vistoria de entrada, revisar o estado atual do imóvel e
+                organizar possíveis reparos antes da vistoria de saída e da
+                devolução de imóvel.
+              </p>
+              <p>
+                Esse apoio é preventivo e orientativo. A VIA+ não substitui a
+                vistoria oficial da imobiliária, administradora, proprietário ou
+                parceiro designado, não emite laudo técnico ou pericial e não
+                garante aprovação na entrega.
               </p>
               <div className="attention-tags">
                 {attentionPoints.map((point) => (
@@ -264,6 +311,29 @@ export default function Home() {
               </div>
             </div>
             <DelaySimulator />
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container section-heading centered">
+            <p className="eyebrow dark">Guias locais</p>
+            <h2>Guias rápidos por necessidade</h2>
+            <p>
+              Páginas específicas ajudam o cliente certo a entender o serviço
+              sem confundir a VIA+ com imobiliária, corretor ou vistoria
+              oficial.
+            </p>
+            <div className="local-links">
+              <a href="/busca-de-imovel-montes-claros">
+                Busca de imóvel em Montes Claros
+              </a>
+              <a href="/pre-vistoria-entrega-imovel-montes-claros">
+                Pré-vistoria e entrega de imóvel
+              </a>
+              <a href="/clientes-indicados-por-imobiliarias">
+                Clientes indicados por imobiliárias
+              </a>
+            </div>
           </div>
         </section>
 
@@ -352,6 +422,37 @@ export default function Home() {
                   aprovação na vistoria oficial.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-tinted" id="imobiliarias">
+          <div className="container split-layout">
+            <div>
+              <p className="eyebrow dark">Parcerias e indicações</p>
+              <h2>Atendemos clientes indicados por imobiliárias</h2>
+              <p className="section-lead">
+                A VIA+ pode atender inquilinos indicados por imobiliárias,
+                corretores de imóveis, proprietários ou empresas parceiras em
+                Montes Claros. O objetivo é ajudar o cliente a compreender
+                documentos, organizar possíveis pendências e se preparar com
+                antecedência para a entrega do imóvel.
+              </p>
+              <p>
+                O atendimento não altera responsabilidades da locação: a
+                imobiliária, o corretor, o proprietário ou o parceiro designado
+                continuam responsáveis pela vistoria oficial, pelo laudo de
+                vistoria, pelas condições contratuais, pela negociação e pela
+                decisão final sobre a devolução do imóvel.
+              </p>
+            </div>
+            <div className="notice">
+              <ShieldIcon />
+              <p>
+                A VIA+ atua como apoio orientativo e organizacional. Não
+                substitui imobiliária, corretor de imóveis, administradora,
+                vistoria oficial ou parceiro responsável pela locação.
+              </p>
             </div>
           </div>
         </section>

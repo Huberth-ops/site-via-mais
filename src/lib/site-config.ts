@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   legalName: "VIA+ Soluções para Locação e Entrega",
   slogan: "Inteligência para alugar, tranquilidade para entregar.",
   description:
-    "A VIA+ organiza a busca por imóveis para locação e orienta a preparação para entrega de imóveis alugados em Montes Claros/MG e região.",
+    "A VIA+ organiza a busca de imóvel em Montes Claros e orienta a preparação para entrega de imóvel alugado, sem substituir imobiliárias, corretores ou a vistoria oficial.",
   area: "Montes Claros/MG e região",
   city: "Montes Claros",
   state: "Minas Gerais",
@@ -22,36 +22,41 @@ export const siteConfig: SiteConfig = {
       number: "01",
       title: "Pesquisa Orientada de Imóveis",
       description:
-        "Pesquisa e organização de opções de locação conforme perfil, faixa de valor, localização, tipo de imóvel e necessidade.",
+        "Busca de imóvel em Montes Claros com pesquisa e organização de opções públicas de locação conforme perfil, faixa de valor, localização, tipo de imóvel e necessidade.",
       benefits: [
+        "Imóvel para alugar em Montes Claros com critérios definidos",
+        "Imóvel comercial em Montes Claros quando essa for a necessidade",
         "Opções mais alinhadas ao perfil",
         "Menos tempo em anúncios dispersos",
         "Organização para comparar alternativas",
         "Atendimento residencial e comercial",
       ],
       disclaimer:
-        "Não inclui negociação, intermediação da locação ou atuação como corretor.",
+        "Não inclui negociação, intermediação da locação, anúncio de imóveis, representação de imobiliária ou atuação como corretor de imóveis.",
     },
     {
       id: "consultoria",
       number: "02",
       title: "Consultoria para Entrega",
       description:
-        "Atendimento presencial para leitura orientativa do laudo de entrada e organização dos próximos passos.",
+        "Consultoria para entrega de imóvel em Montes Claros com leitura orientativa de contrato, laudo ou termo de vistoria de entrada e organização dos próximos passos.",
       benefits: [
         "Entendimento dos documentos",
         "Pontos que merecem atenção",
+        "Preparação para vistoria de saída",
+        "Organização para devolução de imóvel",
         "Sequência de ações mais clara",
         "Orientação antes da vistoria oficial",
       ],
-      disclaimer: "Não inclui visita ao imóvel ou emissão de relatório.",
+      disclaimer:
+        "Não inclui visita ao imóvel, emissão de laudo de vistoria, vistoria oficial ou decisão sobre aprovação da entrega.",
     },
     {
       id: "pre-vistoria",
       number: "03",
       title: "Pré-vistoria Orientativa",
       description:
-        "Visita presencial para observação visual do imóvel com base no laudo de entrada e nos documentos apresentados.",
+        "Pré-vistoria em Montes Claros com visita presencial para observação visual do imóvel com base no laudo de entrada e nos documentos apresentados.",
       benefits: [
         "Verificação visual orientativa",
         "Registro de possíveis pendências",
@@ -59,14 +64,14 @@ export const siteConfig: SiteConfig = {
         "Preparação anterior à vistoria oficial",
       ],
       disclaimer:
-        "Não é vistoria oficial, perícia, avaliação estrutural ou garantia de aprovação.",
+        "Não é vistoria oficial da imobiliária ou parceiro, perícia, laudo técnico, avaliação estrutural ou garantia de aprovação.",
     },
     {
       id: "assessoria",
       number: "04",
       title: "Pré-vistoria com Assessoria",
       description:
-        "Pré-vistoria orientativa, relatório e apoio na organização da preparação até a data de entrega.",
+        "Pré-vistoria orientativa, relatório preventivo e apoio na organização da preparação até a data de entrega do imóvel.",
       benefits: [
         "Priorização de pendências",
         "Organização dos reparos",
@@ -74,19 +79,19 @@ export const siteConfig: SiteConfig = {
         "Mais clareza durante a preparação",
       ],
       disclaimer:
-        "Reparos e serviços especializados são contratados separadamente quando necessários.",
+        "Reparos, serviços especializados, vistoria oficial e tratativas de locação permanecem separados e sob responsabilidade dos profissionais competentes.",
     },
   ],
   faqs: [
     {
       question: "A VIA+ realiza a vistoria oficial do imóvel?",
       answer:
-        "Não. A vistoria oficial permanece sob responsabilidade da imobiliária ou empresa designada.",
+        "Não. A vistoria oficial permanece sob responsabilidade da imobiliária, proprietário, administradora ou parceiro designado.",
     },
     {
       question: "A VIA+ emite laudo técnico?",
       answer:
-        "Não. A VIA+ não emite laudo técnico, pericial ou oficial.",
+        "Não. A VIA+ não emite laudo técnico, pericial, oficial ou laudo de vistoria da imobiliária.",
     },
     {
       question: "Qual documento é entregue na pré-vistoria?",
@@ -96,7 +101,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "O relatório substitui o laudo da imobiliária?",
       answer:
-        "Não. Ele serve para organizar a preparação antes da vistoria oficial.",
+        "Não. Ele serve para organizar a preparação antes da vistoria oficial e não substitui o laudo de vistoria de entrada, saída ou devolução feito pela imobiliária ou parceiro responsável.",
     },
     {
       question: "A VIA+ garante aprovação na entrega?",
@@ -136,17 +141,17 @@ export const siteConfig: SiteConfig = {
     {
       question: "A VIA+ negocia aluguel ou contrato?",
       answer:
-        "Não. A VIA+ não negocia contratos, valores ou condições em nome do cliente.",
+        "Não. A VIA+ não negocia contratos, valores, aluguel de imóveis ou condições de locação em nome do cliente.",
     },
     {
       question: "A VIA+ agenda visitas aos imóveis encontrados?",
       answer:
-        "A organização da pesquisa não inclui intermediação. Agendamentos e negociações devem ser feitos com o anunciante, corretor ou imobiliária responsável.",
+        "A organização da pesquisa não inclui intermediação. Agendamentos, propostas, visitas comerciais e negociações devem ser feitos com o anunciante, corretor de imóveis ou imobiliária responsável.",
     },
     {
       question: "A busca substitui um corretor?",
       answer:
-        "Não. A VIA+ organiza opções públicas conforme o perfil do cliente; atos de corretagem permanecem com profissionais e empresas habilitados.",
+        "Não. A VIA+ organiza opções públicas conforme o perfil do cliente; atos de corretagem, captação, negociação e fechamento de locação permanecem com corretores de imóveis e imobiliárias habilitadas.",
     },
     {
       question: "Vocês atendem imóveis residenciais e comerciais?",
@@ -156,7 +161,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "A VIA+ atende proprietários e imobiliárias?",
       answer:
-        "Pode atender ou formar parcerias, desde que o escopo seja previamente definido e respeite os limites do serviço.",
+        "Pode atender clientes indicados por proprietários, imobiliárias e corretores, desde que o escopo seja previamente definido e respeite os limites do serviço. A VIA+ não substitui a imobiliária, o corretor ou a vistoria oficial.",
     },
     {
       question: "O atendimento é online?",
