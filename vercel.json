@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "viamaisconsultoria.com.br"
+        }
+      ],
+      "destination": "https://www.viamaisconsultoria.com.br/:path*",
+      "permanent": true
+    }
+  ]
+}

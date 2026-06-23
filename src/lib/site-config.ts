@@ -1,6 +1,6 @@
 import type { SiteConfig } from "@/lib/types";
 
-const fallbackUrl = "https://seudominio.com.br";
+const fallbackUrl = "https://www.viamaisconsultoria.com.br";
 const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || fallbackUrl;
 
 export const siteConfig: SiteConfig = {
