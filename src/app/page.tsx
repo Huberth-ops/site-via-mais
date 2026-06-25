@@ -5,6 +5,7 @@ import {
   ClockIcon,
   FileIcon,
   HomeCheckIcon,
+  InstagramIcon,
   ShieldIcon,
   WhatsAppIcon,
 } from "@/components/icons";
@@ -45,6 +46,7 @@ const jsonLd = {
       url: siteConfig.siteUrl,
       logo: `${siteConfig.siteUrl}/logo-via-mais.svg`,
       slogan: siteConfig.slogan,
+      sameAs: [siteConfig.instagramUrl],
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
@@ -134,6 +136,7 @@ export default function Home() {
             <a href="#entrega">Entrega</a>
             <a href="#imobiliarias">Imobiliárias</a>
             <a href="/busca-de-imovel-montes-claros">Guias locais</a>
+            <a href="/o-que-a-via-mais-nao-faz">Limites</a>
             <a href="#como-funciona">Como funciona</a>
             <a href="#faq">Dúvidas</a>
           </nav>
@@ -158,6 +161,7 @@ export default function Home() {
               <a href="#entrega">Preparação para entrega</a>
               <a href="#imobiliarias">Imobiliárias</a>
               <a href="/busca-de-imovel-montes-claros">Guias locais</a>
+              <a href="/o-que-a-via-mais-nao-faz">Limites</a>
               <a href="#como-funciona">Como funciona</a>
               <a href="#faq">Dúvidas</a>
             </nav>
@@ -333,6 +337,9 @@ export default function Home() {
               </a>
               <a href="/clientes-indicados-por-imobiliarias">
                 Clientes indicados por imobiliárias
+              </a>
+              <a href="/o-que-a-via-mais-nao-faz">
+                O que a VIA+ não faz
               </a>
             </div>
           </div>
@@ -569,6 +576,16 @@ export default function Home() {
             <p>{siteConfig.area}</p>
             <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
               {siteConfig.whatsappDisplay}
+            </a>
+            <a
+              className="footer-social-link"
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da VIA+"
+            >
+              <InstagramIcon />
+              Instagram
             </a>
           </div>
           <div>

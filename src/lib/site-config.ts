@@ -15,6 +15,7 @@ export const siteConfig: SiteConfig = {
   country: "Brasil",
   whatsapp: "5538999079952",
   whatsappDisplay: "(38) 99907-9952",
+  instagramUrl: "https://www.instagram.com/viamaisbuscaeentregadeimoveis",
   siteUrl: rawSiteUrl.trim().replace(/\/$/, ""),
   services: [
     {

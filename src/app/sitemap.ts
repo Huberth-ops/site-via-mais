@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/busca-de-imovel-montes-claros", priority: 0.85 },
     { path: "/pre-vistoria-entrega-imovel-montes-claros", priority: 0.85 },
     { path: "/clientes-indicados-por-imobiliarias", priority: 0.75 },
+    { path: "/o-que-a-via-mais-nao-faz", priority: 0.7 },
   ] as const;
 
   return routes.map((route) => ({

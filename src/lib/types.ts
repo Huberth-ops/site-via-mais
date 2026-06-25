@@ -23,6 +23,7 @@ export type SiteConfig = {
   country: string;
   whatsapp: string;
   whatsappDisplay: string;
+  instagramUrl: string;
   siteUrl: string;
   services: Service[];
   faqs: FaqItem[];

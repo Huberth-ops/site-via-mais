@@ -1,7 +1,13 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
-import { ArrowIcon, CheckIcon, ShieldIcon, WhatsAppIcon } from "@/components/icons";
+import {
+  ArrowIcon,
+  CheckIcon,
+  InstagramIcon,
+  ShieldIcon,
+  WhatsAppIcon,
+} from "@/components/icons";
 import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 type LocalSeoPageProps = {
@@ -39,6 +45,7 @@ export function LocalSeoPage({
             <Link href="/#busca">Busca</Link>
             <Link href="/#entrega">Entrega</Link>
             <Link href="/#imobiliarias">Imobiliárias</Link>
+            <Link href="/o-que-a-via-mais-nao-faz">Limites</Link>
             <Link href="/#faq">Dúvidas</Link>
           </nav>
           <a
@@ -145,6 +152,16 @@ export function LocalSeoPage({
             <p>{siteConfig.area}</p>
             <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
               {siteConfig.whatsappDisplay}
+            </a>
+            <a
+              className="footer-social-link"
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da VIA+"
+            >
+              <InstagramIcon />
+              Instagram
             </a>
           </div>
           <div>

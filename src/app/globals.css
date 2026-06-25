@@ -1240,6 +1240,19 @@ h3 {
   color: white;
 }
 
+.footer-social-link {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  width: fit-content;
+}
+
+.footer-social-link svg {
+  height: 16px;
+  width: 16px;
+}
+
 .footer-grid b {
   display: block;
   font-size: 0.82rem;

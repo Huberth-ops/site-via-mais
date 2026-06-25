@@ -21,6 +21,24 @@
       "Pré-vistoria com assessoria",
       "Relatório de Pendências e Reparos Recomendados"
     ],
+    "reference_pages": [
+      {
+        "topic": "Busca de imóvel em Montes Claros",
+        "url": "https://www.viamaisconsultoria.com.br/busca-de-imovel-montes-claros"
+      },
+      {
+        "topic": "Pré-vistoria e entrega de imóvel em Montes Claros",
+        "url": "https://www.viamaisconsultoria.com.br/pre-vistoria-entrega-imovel-montes-claros"
+      },
+      {
+        "topic": "Clientes indicados por imobiliárias",
+        "url": "https://www.viamaisconsultoria.com.br/clientes-indicados-por-imobiliarias"
+      },
+      {
+        "topic": "O que a VIA+ não faz",
+        "url": "https://www.viamaisconsultoria.com.br/o-que-a-via-mais-nao-faz"
+      }
+    ],
     "service_area": {
       "city": "Montes Claros",
       "state": "Minas Gerais",
@@ -39,7 +57,20 @@
   ],
   "contact": {
     "primary_channel": "WhatsApp",
-    "url": "https://wa.me/5538999079952"
+    "url": "https://wa.me/5538999079952",
+    "channels": [
+      {
+        "name": "WhatsApp",
+        "url": "https://wa.me/5538999079952"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/viamaisbuscaeentregadeimoveis"
+      }
+    ],
+    "social_profiles": [
+      "https://www.instagram.com/viamaisbuscaeentregadeimoveis"
+    ]
   },
   "audience": [
     "Pessoas buscando imóvel para locação",

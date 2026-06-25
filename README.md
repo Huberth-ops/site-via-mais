@@ -14,9 +14,11 @@ Copie `.env.example` para `.env.local` e informe o domínio canônico:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://seudominio.com.br
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
-Não adicione tokens ou chaves sensíveis em variáveis `NEXT_PUBLIC_*`.
+`NEXT_PUBLIC_GA_MEASUREMENT_ID` é opcional e deve receber apenas o ID público
+do GA4. Não adicione tokens ou chaves sensíveis em variáveis `NEXT_PUBLIC_*`.
 
 ## Desenvolvimento
 
