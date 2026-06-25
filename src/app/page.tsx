@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowIcon,
   CheckIcon,
@@ -469,19 +470,31 @@ export default function Home() {
             </div>
             <div className="team-grid">
               <article>
-                <div className="team-initial">HP</div>
+                <Image
+                  className="team-photo"
+                  src="/team/huberth-paulo.png"
+                  alt="Foto de Huberth Paulo"
+                  width={72}
+                  height={72}
+                />
                 <div>
                   <h3>Huberth Paulo</h3>
                   <p>Vistoriador profissional</p>
-                  <strong>Aproximadamente 9 anos de experiência</strong>
+                  <strong>Mais de 9 anos de experiência</strong>
                 </div>
               </article>
               <article>
-                <div className="team-initial">RG</div>
+                <Image
+                  className="team-photo"
+                  src="/team/rogerio-gomes.png"
+                  alt="Foto de Rogério Gomes"
+                  width={72}
+                  height={72}
+                />
                 <div>
                   <h3>Rogério Gomes</h3>
                   <p>Vistoriador profissional</p>
-                  <strong>Aproximadamente 11 anos de experiência</strong>
+                  <strong>Mais de 11 anos de experiência</strong>
                 </div>
               </article>
             </div>

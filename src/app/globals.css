@@ -1083,17 +1083,14 @@ h3 {
   padding: 28px;
 }
 
-.team-initial {
-  align-items: center;
+.team-photo {
   background: var(--petroleum);
   border-radius: 50%;
-  color: white;
-  display: flex;
   flex: 0 0 72px;
-  font-size: 1rem;
-  font-weight: 850;
   height: 72px;
-  justify-content: center;
+  object-fit: cover;
+  object-position: center;
+  width: 72px;
 }
 
 .team-grid h3 {
