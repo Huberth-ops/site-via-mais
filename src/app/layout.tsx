@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
-  title: "Via Mais | Busca e Entrega de Imóvel em Montes Claros",
+  title: "Entrega de Imóvel em Montes Claros | Reparos e Gestão | VIA+",
   description: siteConfig.description,
   applicationName: siteConfig.legalName,
   alternates: { canonical: "/" },
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "/",
     siteName: siteConfig.name,
-    title: "VIA+ | Busca e entrega inteligente de imóveis",
+    title: "VIA+ | Gestão e reparos para entrega de imóveis",
     description: siteConfig.description,
     images: [{ url: "/opengraph-image" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VIA+ | Busca e entrega inteligente de imóveis",
+    title: "VIA+ | Gestão e reparos para entrega de imóveis",
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },

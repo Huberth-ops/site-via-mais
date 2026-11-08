@@ -1554,3 +1554,10 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+/* Destaque comercial da gestão, mantendo a identidade existente. */
+.hero-promise { font-size: clamp(1.15rem, 2vw, 1.6rem); line-height: 1.45; margin-top: 1.5rem; }
+.service-featured { grid-column: 1 / -1; border: 2px solid #0d4d4d; background: #edf6f3; }
+.service-featured h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.service-card > svg { width: 36px; height: 36px; color: #0d4d4d; margin-bottom: 1rem; }
+.service-card .text-link { min-height: 44px; }
+.timeline + .button { margin-top: 2rem; }

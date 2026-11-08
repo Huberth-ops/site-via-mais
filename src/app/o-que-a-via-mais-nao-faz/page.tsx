@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "A VIA+ é uma imobiliária?",
     answer:
-      "Não. A VIA+ atua como apoio orientativo e organizacional para busca de imóveis e preparação de entrega, sem anunciar, captar, intermediar ou fechar locações.",
+      "Não. A VIA+ atua como gestão da preparação da entrega, com contratação e acompanhamento de prestadores, e busca orientada de imóveis, sem anunciar, captar, intermediar ou fechar locações.",
   },
   {
     question: "A VIA+ substitui corretor de imóveis?",
@@ -70,6 +70,7 @@ export default function OQueAViaMaisNaoFazPage() {
         primaryMessage="Olá, quero entender se a VIA+ pode ajudar no meu caso e sei que o serviço não substitui imobiliária, corretor ou vistoria oficial."
         disclaimer="A VIA+ não é imobiliária, não substitui corretor de imóveis, não intermedeia locações, não realiza vistoria oficial, não emite laudo técnico e não garante aprovação na entrega do imóvel."
         sections={[
+{ title: "O que fazemos na gestão completa", text: "Contratamos prestadores e acompanhamos os reparos aprovados. O orçamento define serviços, valores, responsabilidades e pagamento ao prestador responsável pelo recebimento. Não substituímos profissionais legalmente habilitados em atividades regulamentadas." },
           {
             title: "Não somos imobiliária",
             text: "A VIA+ não anuncia imóveis, não capta imóveis, não administra carteira de locação e não fecha contratos. O apoio é organizar informações para que o cliente avance com mais clareza.",

@@ -1,25 +1,23 @@
 {
   "brand": {
     "name": "VIA+ Soluções para Locação e Entrega",
-    "search_aliases": ["Via Mais", "VIA Mais", "VIA+", "Via+ Soluções"],
+    "search_aliases": [
+      "Via Mais",
+      "VIA Mais",
+      "VIA+",
+      "Via+ Soluções"
+    ],
     "slogan": "Inteligência para alugar, tranquilidade para entregar.",
     "category": "Organização para busca e preparação de entrega de imóveis"
   },
   "business": {
-    "description": "A VIA+ organiza opções públicas de imóveis para locação e orienta presencialmente a preparação preventiva para entrega de imóveis alugados.",
+    "description": "Gestão completa da entrega de imóveis em Montes Claros, com contratação e acompanhamento de prestadores para reparos aprovados.",
     "main_services": [
-      "Busca de imóvel em Montes Claros",
-      "Imóvel para alugar em Montes Claros",
-      "Imóvel comercial em Montes Claros",
-      "Locação de imóveis em Montes Claros",
-      "Entrega de imóvel em Montes Claros",
-      "Consultoria para entrega de imóvel em Montes Claros",
-      "Pré-vistoria em Montes Claros",
-      "Pesquisa orientada de imóveis para locação",
-      "Consultoria para entrega de imóvel",
-      "Pré-vistoria orientativa",
-      "Pré-vistoria com assessoria",
-      "Relatório de Pendências e Reparos Recomendados"
+      "Gestão completa da entrega",
+      "Pré-vistoria avulsa",
+      "Reparos após vistoria",
+      "Assessoria preventiva para proprietários",
+      "Busca orientada de imóveis"
     ],
     "reference_pages": [
       {
@@ -80,8 +78,7 @@
     "Imobiliárias e corretores parceiros"
   ],
   "referral_positioning": [
-    "A VIA+ pode atender clientes indicados por imobiliárias, corretores de imóveis, proprietários ou parceiros.",
-    "O atendimento é orientativo e organizacional.",
-    "A VIA+ não substitui imobiliárias, corretores, administradoras, parceiros responsáveis, vistorias oficiais ou atos de corretagem."
+    "Contratação opcional e independente da imobiliária.",
+    "Centralização de orçamentos, contratação e acompanhamento dos prestadores."
   ]
 }

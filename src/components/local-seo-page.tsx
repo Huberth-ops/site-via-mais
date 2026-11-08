@@ -22,6 +22,7 @@ type LocalSeoPageProps = {
     items?: string[];
   }>;
   disclaimer: string;
+  children?: ReactNode;
 };
 
 export function LocalSeoPage({
@@ -32,6 +33,7 @@ export function LocalSeoPage({
   primaryMessage,
   sections,
   disclaimer,
+  children,
 }: LocalSeoPageProps) {
   return (
     <>
@@ -84,9 +86,7 @@ export function LocalSeoPage({
               </div>
               <p className="hero-note">
                 <ShieldIcon />
-                A VIA+ atua como apoio orientativo e organizacional. Não
-                substitui imobiliária, corretor de imóveis, administradora,
-                vistoria oficial ou parceiro responsável pela locação.
+                Gestão da preparação, contratação e acompanhamento de prestadores conforme orçamento aprovado. A vistoria oficial permanece com os responsáveis pela locação.
               </p>
             </div>
             <div className="notice hero-notice">
@@ -117,6 +117,7 @@ export function LocalSeoPage({
           </div>
         </section>
 
+        {children}
         <section className="final-cta">
           <div className="container cta-layout">
             <div>

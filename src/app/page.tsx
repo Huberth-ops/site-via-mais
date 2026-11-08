@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import {
   ArrowIcon,
   CheckIcon,
@@ -12,7 +12,7 @@ import {
 import { BrandLogo } from "@/components/brand-logo";
 import { DelaySimulator } from "@/components/delay-simulator";
 import { LeadQualifier } from "@/components/lead-qualifier";
-import { SearchCostCalculator } from "@/components/search-cost-calculator";
+
 import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 const attentionPoints = [
@@ -28,16 +28,17 @@ const attentionPoints = [
 ];
 
 const processSteps = [
-  ["Você entra em contato", "Conte se precisa encontrar ou entregar."],
-  ["Entendemos a necessidade", "Explicamos o serviço e seus limites."],
-  ["Organizamos o atendimento", "Definimos documentos, local e condições."],
-  ["Realizamos o serviço", "Pesquisa, consultoria ou pré-vistoria."],
-  ["Você recebe os próximos passos", "Informações claras para seguir."],
+["Você entra em contato", "Informe a situação do imóvel, a previsão de desocupação e suas necessidades."],
+["Avaliamos o imóvel", "Analisamos documentos, realizamos a pré-vistoria quando contratada e identificamos pendências."],
+["Apresentamos o orçamento", "Definimos serviços, valores, responsabilidades e condições para sua aprovação."],
+["Contratamos e acompanhamos os prestadores", "Coordenamos os serviços aprovados e acompanhamos o andamento e os prazos acordados."],
+["Preparamos a entrega", "Conferimos os serviços, apoiamos a vistoria oficial quando contratado e organizamos a devolução das chaves."]
 ];
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    { "@type": "WebSite", "@id": `${siteConfig.siteUrl}/#website`, url: siteConfig.siteUrl, name: siteConfig.name, inLanguage: "pt-BR" },
     {
       "@type": "Organization",
       "@id": `${siteConfig.siteUrl}/#organizacao`,
@@ -74,23 +75,12 @@ const jsonLd = {
       },
     },
     {
-      "@type": "ProfessionalService",
+      "@type": "Service",
       "@id": `${siteConfig.siteUrl}/#servico`,
       name: siteConfig.name,
       provider: { "@id": `${siteConfig.siteUrl}/#organizacao` },
       areaServed: `${siteConfig.city}, ${siteConfig.state}`,
-      serviceType: [
-        "Busca de imóvel em Montes Claros",
-        "Locação de imóveis em Montes Claros",
-        "Imóvel para alugar em Montes Claros",
-        "Imóvel comercial em Montes Claros",
-        "Entrega de imóvel em Montes Claros",
-        "Consultoria para entrega de imóvel em Montes Claros",
-        "Pré-vistoria em Montes Claros",
-        "Pesquisa orientada de imóveis para locação",
-        "Consultoria para entrega de imóvel alugado",
-        "Pré-vistoria orientativa",
-      ],
+      serviceType: "Gestão completa da entrega de imóveis",
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Serviços VIA+ em Montes Claros",
@@ -132,10 +122,10 @@ export default function Home() {
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
             <a href="#servicos">Serviços</a>
-            <a href="#busca">Busca</a>
+            <a href="#proprietarios">Proprietários</a>
             <a href="#entrega">Entrega</a>
             <a href="#imobiliarias">Imobiliárias</a>
-            <a href="/busca-de-imovel-montes-claros">Guias locais</a>
+
             <a href="/o-que-a-via-mais-nao-faz">Limites</a>
             <a href="#como-funciona">Como funciona</a>
             <a href="#faq">Dúvidas</a>
@@ -175,30 +165,20 @@ export default function Home() {
           <div className="container hero-layout">
             <div className="hero-copy">
               <p className="eyebrow">VIA+ · {siteConfig.area}</p>
-              <h1>
-                Encontre opções com mais clareza.{" "}
-                <span>Prepare a entrega com antecedência.</span>
-              </h1>
-              <p className="hero-lead">
-                A VIA+ ajuda famílias e empresas na busca de imóvel em Montes
-                Claros e orienta inquilinos na entrega de imóvel alugado antes
-                da vistoria oficial da imobiliária, proprietário ou parceiro
-                designado.
-              </p>
+              <h1>Entrega de imóvel em Montes Claros <span>sem complicação</span></h1>
+              <h2 className="hero-promise">Deixe as chaves conosco. A VIA+ cuida da preparação da sua entrega.</h2><p className="hero-lead">Identificamos pendências, organizamos os reparos, contratamos prestadores e acompanhamos os serviços até a preparação final do imóvel. Você centraliza o atendimento e ganha praticidade.</p>
               <div className="hero-actions">
-                <a className="button" href="#busca">
-                  Quero encontrar
+                <a className="button" href={whatsappUrl()}>
+                  Quero ajuda para entregar meu imóvel
                   <ArrowIcon />
                 </a>
-                <a className="button button-secondary" href="#entrega">
-                  Quero preparar a entrega
+                <a className="button button-secondary" href="#como-funciona">
+                  Entenda como funciona
                 </a>
               </div>
               <p className="hero-note">
                 <ShieldIcon />
-                Atuação orientativa e organizacional. Sem substituir
-                imobiliárias, corretores de imóveis, locação ou vistorias
-                oficiais.
+                Guarda de chaves mediante autorização e condições combinadas. A vistoria oficial e sua aprovação permanecem com os responsáveis pela locação.
               </p>
             </div>
 
@@ -219,7 +199,7 @@ export default function Home() {
           <div className="container">
             <div className="section-heading centered">
               <p className="eyebrow dark">Serviços</p>
-              <h2>Organização para diferentes momentos da locação</h2>
+              <h2>Gestão completa, do orçamento à preparação final</h2>
               <p>
                 Escolha o ponto em que precisa de apoio. Cada serviço apresenta
                 com clareza o que está — e o que não está — incluído.
@@ -227,7 +207,7 @@ export default function Home() {
             </div>
             <div className="services-grid">
               {siteConfig.services.map((service) => (
-                <article className="service-card" key={service.id}>
+                <article className={`service-card ${service.id === "gestao" ? "service-featured" : ""}`} id={service.id === "proprietarios" ? "proprietarios" : undefined} key={service.id}>
                   <div className="service-number">{service.number}</div>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
@@ -239,57 +219,14 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <p className="card-disclaimer">{service.disclaimer}</p>
+                  <p className="card-disclaimer">{service.disclaimer}</p><a className="text-link" href={whatsappUrl(`Olá! Gostaria de saber mais sobre ${service.title}.`)}>Solicitar orçamento <ArrowIcon /></a>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section section-tinted" id="busca">
-          <div className="container split-layout">
-            <div>
-              <p className="eyebrow dark">Pesquisa orientada</p>
-              <h2>Busca de imóvel em Montes Claros sem perder tempo com opções fora do perfil</h2>
-              <p className="section-lead">
-                A VIA+ reúne e organiza opções públicas de imóvel para alugar
-                em Montes Claros conforme localização, faixa de aluguel,
-                estrutura e prioridades informadas por você. O apoio vale para
-                imóvel residencial e imóvel comercial em Montes Claros.
-              </p>
-              <p>
-                Importante: a VIA+ não anuncia imóveis, não intermedeia locação
-                de imóveis em Montes Claros, não negocia contratos e não
-                substitui imobiliária ou corretor de imóveis. Visitas,
-                propostas e condições devem ser tratadas diretamente com o
-                anunciante, corretor ou imobiliária responsável.
-              </p>
-              <ul className="feature-list">
-                <li><CheckIcon /> Perfil definido antes da pesquisa</li>
-                <li><CheckIcon /> Opções reunidas em um único resumo</li>
-                <li><CheckIcon /> Apoio residencial e comercial</li>
-                <li><CheckIcon /> Comparação inicial mais clara</li>
-              </ul>
-              <a
-                className="text-link"
-                href="/busca-de-imovel-montes-claros"
-              >
-                Ver página sobre busca de imóvel em Montes Claros <ArrowIcon />
-              </a>
-              <a
-                className="text-link"
-                href={whatsappUrl(
-                  "Olá, quero explicar o imóvel que procuro e entender a Pesquisa Orientada da VIA+.",
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Explicar o imóvel que procuro <ArrowIcon />
-              </a>
-            </div>
-            <SearchCostCalculator />
-          </div>
-        </section>
+        <section className="section section-tinted" id="busca"><div className="container"><p className="eyebrow dark">Serviço complementar</p><h2>Também procura um imóvel?</h2><p>Organizamos opções públicas conforme seu perfil, sem intermediação da locação.</p><a className="text-link" href="/busca-de-imovel-montes-claros">Conhecer a busca orientada <ArrowIcon /></a></div></section>
 
         <section className="section dark-section" id="entrega">
           <div className="container split-layout">
@@ -297,14 +234,10 @@ export default function Home() {
               <p className="eyebrow">Preparação para entrega</p>
               <h2>Entrega de imóvel em Montes Claros com preparação antes da vistoria oficial</h2>
               <p className="section-lead">
-                A consultoria para entrega de imóvel em Montes Claros e a
-                pré-vistoria em Montes Claros ajudam o inquilino a ler o laudo
-                de vistoria de entrada, revisar o estado atual do imóvel e
-                organizar possíveis reparos antes da vistoria de saída e da
-                devolução de imóvel.
+                A VIA+ coordena a preparação e os reparos aprovados. Dias adicionais podem representar aluguel e encargos: simule seu cenário e organize o cronograma com antecedência.
               </p>
               <p>
-                Esse apoio é preventivo e orientativo. A VIA+ não substitui a
+                A contratação depende de avaliação e orçamento aprovado. A VIA+ não substitui a
                 vistoria oficial da imobiliária, administradora, proprietário ou
                 parceiro designado, não emite laudo técnico ou pericial e não
                 garante aprovação na entrega.
@@ -390,11 +323,11 @@ export default function Home() {
                   <p>{text}</p>
                 </li>
               ))}
-            </ol>
+            </ol><a className="button" href={whatsappUrl()}>Quero deixar minha entrega com a VIA+</a>
           </div>
         </section>
 
-        <section className="section report-section">
+        <section className="section"><div className="container"><p className="eyebrow dark">Você cuida da mudança</p><h2>Nós cuidamos da preparação da entrega.</h2><p className="section-lead">Você não precisa procurar pedreiro, pintor, eletricista ou profissional de limpeza. A VIA+ organiza os serviços e contrata prestadores para os reparos aprovados, acompanha os prazos e mantém você informado.</p><ul className="feature-list">{["Pintura e retoques","Limpeza geral","Reparos hidráulicos","Reparos elétricos simples, por profissionais habilitados quando aplicável","Portas, fechaduras e dobradiças","Ajustes de acabamentos e pequenas manutenções"].map(item=><li key={item}><CheckIcon />{item}</li>)}</ul><p>Serviços sujeitos à avaliação, aprovação do orçamento e disponibilidade. Você pode deixar as chaves sob nossa responsabilidade mediante autorização e condições acertadas.</p><a className="button" href={whatsappUrl()}>Quero um orçamento para minha entrega</a></div></section><section className="section report-section">
           <div className="container split-layout">
             <div className="report-mockup">
               <div className="report-header">
@@ -434,83 +367,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section section-tinted" id="imobiliarias">
-          <div className="container split-layout">
-            <div>
-              <p className="eyebrow dark">Parcerias e indicações</p>
-              <h2>Atendemos clientes indicados por imobiliárias</h2>
-              <p className="section-lead">
-                A VIA+ pode atender inquilinos indicados por imobiliárias,
-                corretores de imóveis, proprietários ou empresas parceiras em
-                Montes Claros. O objetivo é ajudar o cliente a compreender
-                documentos, organizar possíveis pendências e se preparar com
-                antecedência para a entrega do imóvel.
-              </p>
-              <p>
-                O atendimento não altera responsabilidades da locação: a
-                imobiliária, o corretor, o proprietário ou o parceiro designado
-                continuam responsáveis pela vistoria oficial, pelo laudo de
-                vistoria, pelas condições contratuais, pela negociação e pela
-                decisão final sobre a devolução do imóvel.
-              </p>
-            </div>
-            <div className="notice">
-              <ShieldIcon />
-              <p>
-                A VIA+ atua como apoio orientativo e organizacional. Não
-                substitui imobiliária, corretor de imóveis, administradora,
-                vistoria oficial ou parceiro responsável pela locação.
-              </p>
-            </div>
-          </div>
-        </section>
+        <section className="section section-tinted" id="imobiliarias"><div className="container"><p className="eyebrow dark">Para imobiliárias</p><h2>Um único contato para organizar os reparos dos seus clientes.</h2><p className="section-lead">Em vez de administrar diferentes contatos de pintores, profissionais de manutenção e limpeza, sua imobiliária pode encaminhar o cliente à VIA+. Nós levantamos as necessidades, organizamos os serviços, contratamos os prestadores e acompanhamos a execução.</p><p>Centralização do atendimento, organização dos orçamentos e acompanhamento das pendências antes ou após a vistoria. A contratação é sempre opcional e independente.</p><a className="button" href={whatsappUrl("Olá! Quero conhecer a parceria para imobiliárias.")}>Quero conhecer a parceria para imobiliárias</a><a className="text-link" href="/clientes-indicados-por-imobiliarias">Entenda o atendimento por indicação <ArrowIcon /></a></div></section>
 
-        <section className="section dark-section about-section" id="quem-somos">
-          <div className="container">
-            <div className="section-heading">
-              <p className="eyebrow">Quem somos</p>
-              <h2>Experiência prática para orientar com mais clareza</h2>
-              <p>
-                A VIA+ nasceu da experiência de profissionais que acompanham
-                rotinas de vistoria, locação e entrega de imóveis.
-              </p>
-            </div>
-            <div className="team-grid">
-              <article>
-                <Image
-                  className="team-photo"
-                  src="/team/huberth-paulo.png"
-                  alt="Foto de Huberth Paulo"
-                  width={72}
-                  height={72}
-                />
-                <div>
-                  <h3>Huberth Paulo</h3>
-                  <p>Vistoriador profissional</p>
-                  <strong>Mais de 9 anos de experiência</strong>
-                </div>
-              </article>
-              <article>
-                <Image
-                  className="team-photo"
-                  src="/team/rogerio-gomes.png"
-                  alt="Foto de Rogério Gomes"
-                  width={72}
-                  height={72}
-                />
-                <div>
-                  <h3>Rogério Gomes</h3>
-                  <p>Vistoriador profissional</p>
-                  <strong>Mais de 11 anos de experiência</strong>
-                </div>
-              </article>
-            </div>
-            <p className="experience-note">
-              Informações profissionais fornecidas pelos responsáveis e sujeitas
-              à validação documental antes da publicação definitiva.
-            </p>
-          </div>
-        </section>
+        <section className="section" id="quem-somos"><div className="container"><div className="section-heading"><p className="eyebrow dark">Por que VIA+</p><h2>Por que deixar a entrega do seu imóvel com a VIA+?</h2><p>Você não precisa administrar sozinho orçamentos, profissionais, reparos e prazos. A VIA+ organiza e acompanha as etapas contratadas para uma entrega mais tranquila.</p></div><div className="services-grid">{[
+["Um único ponto de contato","Centralizamos a comunicação sobre a preparação e os reparos."],
+["Contratação de prestadores","Contratamos os profissionais adequados aos serviços aprovados."],
+["Acompanhamento dos reparos","Monitoramos execução, andamento e prazos combinados."],
+["Preparação até a entrega","Verificamos os serviços realizados e apoiamos o processo de devolução."]
+].map(([title,text])=><article className="service-card" key={title}><HomeCheckIcon /><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
         <section className="section" id="faq">
           <div className="container faq-layout">
@@ -548,8 +412,7 @@ export default function Home() {
               <p className="eyebrow">Próximo passo</p>
               <h2>Organize agora o que pode virar pressa depois</h2>
               <p>
-                Conte se você está procurando um imóvel ou se preparando para
-                uma entrega. A VIA+ explica o caminho com clareza.
+                Conte em que etapa está sua entrega. Vamos organizar o orçamento e os próximos passos.
               </p>
             </div>
             <a

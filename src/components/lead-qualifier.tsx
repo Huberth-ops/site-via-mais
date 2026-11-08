@@ -11,7 +11,8 @@ import { whatsappUrl } from "@/lib/site-config";
 type LeadIntent = "search" | "delivery";
 
 export function LeadQualifier() {
-  const [intent, setIntent] = useState<LeadIntent>("search");
+  const [intent, setIntent] = useState<LeadIntent>("delivery");
+  const [stage, setStage] = useState("Vou desocupar o imóvel");
   const [propertyType, setPropertyType] = useState("Residencial");
   const [location, setLocation] = useState("");
   const [budget, setBudget] = useState("");
@@ -32,7 +33,9 @@ export function LeadQualifier() {
         : [
             "Olá, quero ajuda da VIA+ para preparar a entrega de um imóvel.",
             `Tipo: ${propertyType}.`,
-            `Endereço, bairro ou região: ${location.trim() || "a definir"}.`,
+            `Bairro ou região: ${location.trim() || "a definir"}.`,
+            `Etapa da entrega: ${stage}.`,
+            `Descrição: ${description.trim() || "não informada"}.`,
             `Previsão de vistoria ou entrega: ${date || "a definir"}.`,
             `Imobiliária ou responsável: ${realEstateAgency.trim() || "a definir"}.`,
           ];
@@ -46,6 +49,7 @@ export function LeadQualifier() {
     location,
     propertyType,
     realEstateAgency,
+    stage,
   ]);
 
   return (
@@ -106,7 +110,7 @@ export function LeadQualifier() {
           <span>
             {intent === "search"
               ? "Região ou bairro desejado"
-              : "Endereço, bairro ou região"}
+              : "Bairro ou região"}
           </span>
           <input
             type="text"
@@ -117,7 +121,7 @@ export function LeadQualifier() {
                 ? "Ex.: região central"
                 : "Ex.: bairro Todos os Santos"
             }
-            autoComplete={intent === "search" ? "address-level3" : "street-address"}
+            autoComplete="address-level3"
           />
         </label>
 
@@ -145,6 +149,18 @@ export function LeadQualifier() {
           </>
         ) : (
           <>
+            <label>
+              <span>Etapa da entrega</span>
+              <select value={stage} onChange={(event) => setStage(event.target.value)}>
+                <option>Vou desocupar o imóvel</option>
+                <option>Estou preparando os reparos</option>
+                <option>Já fiz a vistoria e tenho pendências</option>
+              </select>
+            </label>
+            <label>
+              <span>Descrição opcional</span>
+              <textarea value={description} maxLength={1500} rows={3} onChange={(event) => setDescription(event.target.value)} placeholder="Conte o que precisa preparar. Não inclua documentos ou dados sensíveis." />
+            </label>
             <label>
               <span>Previsão de vistoria ou entrega</span>
               <input

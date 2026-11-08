@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Pré-vistoria e entrega de imóvel em Montes Claros | Via Mais",
   description:
-    "Consultoria para entrega de imóvel em Montes Claros e pré-vistoria orientativa antes da vistoria oficial da imobiliária, administradora ou parceiro responsável.",
+    "Gestão da entrega em Montes Claros: pré-vistoria, orçamento integrado, contratação de prestadores e acompanhamento dos reparos.",
   alternates: { canonical: "/pre-vistoria-entrega-imovel-montes-claros" },
 };
 
@@ -19,11 +19,15 @@ export default function PreVistoriaEntregaImovelMontesClarosPage() {
           <span>antes da entrega do imóvel.</span>
         </>
       }
-      lead="A consultoria para entrega de imóvel em Montes Claros ajuda o inquilino a revisar documentos, entender o laudo de vistoria de entrada e organizar pendências antes da vistoria de saída."
+      lead="Da pré-vistoria à preparação final: a VIA+ organiza as pendências, contrata prestadores e acompanha os reparos aprovados para a devolução do imóvel alugado."
       primaryCta="Preparar minha entrega"
-      primaryMessage="Olá, quero orientação para entrega de imóvel em Montes Claros e entendo que a VIA+ não substitui a vistoria oficial da imobiliária ou parceiro."
+      primaryMessage="Olá! Estou entregando um imóvel em Montes Claros e gostaria de um orçamento para a assessoria completa da VIA+."
       disclaimer="A VIA+ não substitui a vistoria oficial da imobiliária, administradora, proprietário ou parceiro designado, não emite laudo técnico ou pericial e não garante aprovação na devolução de imóvel."
       sections={[
+{ title: "Gestão completa da entrega", text: "Avaliamos documentos e necessidades, organizamos o orçamento e coordenamos os serviços aprovados.", items: ["Pré-vistoria presencial e identificação de pendências", "Contratação de prestadores para pintura, limpeza e reparos", "Acompanhamento da execução e prazos acordados", "Verificação final e apoio à vistoria oficial quando contratado", "Organização da devolução das chaves"] },
+{ title: "Orçamento integrado e pagamento", text: "Pré-vistoria, gestão e acompanhamento podem integrar o pacote. A proposta define escopo, valor total, responsabilidades, pagamento e condições antes da contratação. O pagamento é feito diretamente ao prestador responsável pelo recebimento, conforme a proposta." },
+{ title: "Chaves e acesso ao imóvel", text: "Você pode deixar as chaves com a VIA+ mediante autorização e condições combinadas de guarda, acesso e devolução. Assim, não precisa acompanhar individualmente cada prestador." },
+{ title: "Já recebeu apontamentos?", text: "Também organizamos pendências após a vistoria de saída, contratamos prestadores e acompanhamos os reparos aprovados para eventual retorno ou conferência." },
         {
           title: "Preparação preventiva",
           text: "O atendimento é indicado para quem quer chegar à vistoria de saída com mais clareza sobre pintura, limpeza, instalações aparentes, conservação geral e itens descritos no laudo de vistoria de entrada.",
