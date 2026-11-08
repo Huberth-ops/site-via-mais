@@ -36,9 +36,7 @@ export default function Home() {
  <p className="fresh-lead">Identificamos pendências, contratamos prestadores e acompanhamos os reparos aprovados para preparar seu imóvel para a entrega.</p>
  <a className="button" href={whatsappUrl("Olá! Estou entregando um imóvel e gostaria de um orçamento para a gestão completa da entrega.")}>Quero ajuda para entregar meu imóvel <ArrowIcon /></a>
  <a className="fresh-secondary" href="#servicos">Conhecer os serviços ↓</a>
- </div><aside className="fresh-plan"><p className="eyebrow dark">Sua próxima etapa, organizada</p><h2>Da mudança<br/>à entrega das chaves.</h2>
- {["Pendências identificadas","Orçamento aprovado por você","Prestadores e reparos acompanhados","Preparação final do imóvel"].map((t,i)=><div className="plan-row" key={t}><span>0{i+1}</span><p>{t}</p><CheckIcon /></div>)}
- <p className="plan-note">Um único contato para coordenar as etapas contratadas.</p></aside></div></section>
+ </div><div className="hero-video"><ServiceVideo id="antecipacao" /></div></div></section>
  <section className="section" id="servicos"><div className="container"><p className="eyebrow dark">Nossos serviços</p><h2>Como a VIA+ pode ajudar você?</h2><div className="fresh-services">
  {services.map((s,i)=><article className={i===0?"fresh-service primary":"fresh-service"} key={s.id} id={s.id==="proprietarios"?"proprietarios":undefined}><span className="service-index">0{i+1}{i===0?" / Solução completa":""}</span><h3>{s.id==="proprietarios"?"Relatório para proprietários":s.title}</h3><p>{s.description}</p><a href={whatsappUrl(i===2?"Olá! Sou proprietário e gostaria de informações sobre o relatório preventivo do meu imóvel.":`Olá! Gostaria de saber mais sobre ${s.title}.`)}>{labels[i]} <ArrowIcon /></a><a className="service-detail" href={destinations[i]}>Saiba mais</a></article>)}
  </div></div></section>
@@ -47,8 +45,8 @@ export default function Home() {
  <p className="eyebrow dark">Veja na prática</p><h2 id="videos-heading">Sua entrega, explicada em vídeos</h2>
  <p>Escolha um assunto para assistir: da identificação das pendências aos limites da vistoria.</p>
  <div className="home-video-groups">
- <details className="home-video-group" open><summary><span>01</span><strong>Pré-vistoria e pendências</strong><small>2 vídeos</small></summary><div className="home-video-grid"><ServiceVideo id="detalhes" /><ServiceVideo id="previstoria" /></div></details>
- <details className="home-video-group"><summary><span>02</span><strong>Planejamento da entrega</strong><small>2 vídeos</small></summary><div className="home-video-grid"><ServiceVideo id="planejamento" /><ServiceVideo id="antecipacao" /></div></details>
+ <details className="home-video-group" open><summary><span>01</span><strong>Pré-vistoria e pendências</strong><small>1 vídeo</small></summary><ServiceVideo id="detalhes" /></details>
+ <details className="home-video-group"><summary><span>02</span><strong>Planejamento da entrega</strong><small>1 vídeo</small></summary><ServiceVideo id="planejamento" /></details>
  <details className="home-video-group"><summary><span>03</span><strong>Vistoria oficial e limites de atuação</strong><small>1 vídeo</small></summary><ServiceVideo id="limites" /></details>
  </div></div></section>
  <section className="section" id="simuladores"><div className="container simulator-shell"><p className="eyebrow dark">Planeje com clareza</p><h2>Simule os custos da sua locação</h2><p>Explore seu cenário. Estas estimativas não são preços dos serviços da VIA+.</p><details className="calculator-panel" open><summary>Atraso na entrega <span>Aluguel e encargos proporcionais</span></summary><DelaySimulator /></details><details className="calculator-panel"><summary>Tempo e deslocamentos na busca <span>Pesquisa e visitas ao imóvel</span></summary><SearchCostCalculator /></details></div></section>

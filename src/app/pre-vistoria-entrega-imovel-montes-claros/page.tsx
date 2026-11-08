@@ -50,6 +50,6 @@ export default function PreVistoriaEntregaImovelMontesClarosPage() {
           ],
         },
       ]}
-    ><div className="container video-collection"><ServiceVideo id="planejamento" /><ServiceVideo id="previstoria" /><ServiceVideo id="antecipacao" /></div></LocalSeoPage>
+    ><div className="container video-collection"><ServiceVideo id="planejamento" /><ServiceVideo id="antecipacao" /></div></LocalSeoPage>
   );
 }
