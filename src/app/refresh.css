@@ -53,6 +53,8 @@
 .fresh-limits a { text-decoration:underline; }
 .fresh-footer { display:grid; grid-template-columns:180px 1fr 200px; gap:40px; align-items:center; }
 .fresh-footer a { display:block; padding-block:10px; }
+.footer-brand-name { color:#fff; font-size:2.6rem; font-weight:650; letter-spacing:.04em; line-height:1; }
+.footer-brand-name > span { color:#62c6bf; }
 .refresh-home .site-footer { padding-block:36px; }
 @media(max-width:1000px){.fresh-services,.benefit-row{grid-template-columns:repeat(2,minmax(0,1fr))}.fresh-hero-layout{gap:32px}.fresh-about{gap:32px}}
 @media(max-width:767px){.fresh-hero-layout,.fresh-about,.fresh-steps,.fresh-footer{grid-template-columns:1fr}.fresh-hero{padding:40px 0}.fresh-plan{margin-top:12px}.refresh-home .section{padding-block:48px}.fresh-services{grid-template-columns:1fr}.benefit-row{gap:22px}.fresh-footer{gap:20px}.refresh-home .site-footer{padding-bottom:90px}.site-header:has(.original-logo) .header-inner{gap:12px;height:90px}.site-header:has(.original-logo) .brand-logo{width:86px}.site-header:has(.original-logo) .logo-link{min-width:0}.fresh-plan{padding:24px}.refresh-home .header-inner>.button{font-size:.72rem;padding:10px}.site-header:has(.original-logo) .mobile-nav summary span{background:#0d4d4d}.fresh-hero .button{width:100%}}
