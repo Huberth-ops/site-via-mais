@@ -45,20 +45,9 @@ export const siteConfig: SiteConfig = {
     "disclaimer": "Escopo e condições definidos no orçamento. Não substitui vistoria oficial nem garante aprovação."
   },
   {
-    "id": "pendencias",
-    "number": "03",
-    "title": "Resolução de pendências após vistoria",
-    "description": "Já recebeu apontamentos? Levantamos os serviços, contratamos prestadores e coordenamos os reparos para preparar uma nova conferência.",
-    "benefits": [
-      "Organização dos apontamentos",
-      "Orçamento e acompanhamento dos reparos aprovados"
-    ],
-    "disclaimer": "Escopo e condições definidos no orçamento. Não substitui vistoria oficial nem garante aprovação."
-  },
-  {
     "id": "proprietarios",
-    "number": "04",
-    "title": "Assessoria para proprietários",
+    "number": "03",
+    "title": "Relatório preventivo para proprietários",
     "description": "Avaliação visual preventiva da conservação e organização de melhorias antes de uma nova locação.",
     "benefits": [
       "Identificação de necessidades de conservação",
@@ -68,7 +57,7 @@ export const siteConfig: SiteConfig = {
   },
   {
     "id": "pesquisa",
-    "number": "05",
+    "number": "04",
     "title": "Busca orientada de imóveis",
     "description": "Organizamos opções públicas conforme seu perfil, orçamento e localização. Serviço complementar para imóveis residenciais e comerciais.",
     "benefits": [

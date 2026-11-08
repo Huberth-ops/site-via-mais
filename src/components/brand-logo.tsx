@@ -1,35 +1,5 @@
-type BrandLogoProps = {
-  variant?: "light" | "dark";
-  compact?: boolean;
-};
-
-export function BrandLogo({
-  variant = "dark",
-  compact = false,
-}: BrandLogoProps) {
-  const primary = variant === "light" ? "#ffffff" : "#1f2326";
-  const accent = "#0d6b68";
-
-  return (
-    <span className="brand-logo" aria-label="VIA+">
-      <svg
-        aria-hidden="true"
-        viewBox={compact ? "0 0 214 76" : "0 0 285 92"}
-        role="img"
-      >
-        <g fill="none" strokeLinecap="square" strokeWidth="12">
-          <path d="M18 20 48 70 78 20" stroke={primary} />
-          <path d="M101 20v50" stroke={primary} />
-          <path d="M130 70 166 18l36 52" stroke={accent} />
-          <path d="M226 27h45M248.5 4.5v45" stroke={accent} />
-        </g>
-        <g fill={accent}>
-          <rect x="151" y="48" width="11" height="11" />
-          <rect x="170" y="48" width="11" height="11" />
-          <rect x="151" y="65" width="11" height="11" />
-          <rect x="170" y="65" width="11" height="11" />
-        </g>
-      </svg>
-    </span>
-  );
+import Image from "next/image";
+type BrandLogoProps = { variant?: "light" | "dark"; compact?: boolean };
+export function BrandLogo({ compact = false }: BrandLogoProps) {
+  return <span className={compact ? "brand-logo original-logo compact" : "brand-logo original-logo"}><Image src="/logo-via-mais-original.png" alt="VIA+ — Inteligência para alugar, tranquilidade para entregar." width={1254} height={1254} priority /></span>;
 }

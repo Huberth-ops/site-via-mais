@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
-  title: "Entrega de Imóvel em Montes Claros | Reparos e Gestão | VIA+",
+  title: "Entrega de Imóvel em Montes Claros | Gestão de Reparos | VIA+",
   description: siteConfig.description,
   applicationName: siteConfig.legalName,
   alternates: { canonical: "/" },
