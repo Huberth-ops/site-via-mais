@@ -1,3 +1,4 @@
+import { ServiceVideo } from "@/components/service-video";
 import type { Metadata } from "next";
 import { LocalSeoPage } from "@/components/local-seo-page";
 import { siteConfig } from "@/lib/site-config";
@@ -49,6 +50,6 @@ export default function PreVistoriaEntregaImovelMontesClarosPage() {
           ],
         },
       ]}
-    />
+    ><div className="container video-collection"><ServiceVideo id="planejamento" /><ServiceVideo id="previstoria" /><ServiceVideo id="antecipacao" /></div></LocalSeoPage>
   );
 }

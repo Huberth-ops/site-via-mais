@@ -1,4 +1,10 @@
 /* Official asset is displayed in full, without recoloring or cropping. */
+.service-video { display:grid; grid-template-columns:minmax(0,270px) minmax(0,1fr); gap:36px; align-items:center; margin:36px 0; padding:24px; border:1px solid #dce5e0; border-radius:20px; background:#f7f9f6; }
+.service-video video { display:block; width:100%; height:auto; aspect-ratio:478/850; object-fit:contain; border-radius:12px; background:#e1e7e2; }
+.service-video h3 { font-size:clamp(1.2rem,2.4vw,1.8rem); line-height:1.35; margin:0 0 16px; }
+.service-video figcaption>p:not(.eyebrow) { color:#53625c; line-height:1.7; }
+.video-collection { padding-block:24px; }
+@media(max-width:600px){.service-video{grid-template-columns:1fr;gap:24px;padding:20px}.service-video video{max-width:300px;margin-inline:auto}}
 .original-logo { display:inline-flex; width:150px; flex-shrink:0; background:#fff; border-radius:12px; }
 .original-logo img { width:100%; height:auto; object-fit:contain; }
 .site-header:has(.original-logo) { background:#fff; color:#1f2326; border-bottom:1px solid #e2e9e6; }

@@ -1,3 +1,4 @@
+import { ServiceVideo } from "@/components/service-video";
 import { SearchCostCalculator } from "@/components/search-cost-calculator";
 import type { Metadata } from "next";
 import { LocalSeoPage } from "@/components/local-seo-page";
@@ -46,6 +47,6 @@ export default function BuscaDeImovelMontesClarosPage() {
           ],
         },
       ]}
-    ><section className="section"><div className="container"><SearchCostCalculator /></div></section></LocalSeoPage>
+    ><section className="section"><div className="container"><ServiceVideo id="busca" /><SearchCostCalculator /></div></section></LocalSeoPage>
   );
 }

@@ -1,3 +1,4 @@
+import { ServiceVideo } from "@/components/service-video";
 import type { Metadata } from "next";
 import { LocalSeoPage } from "@/components/local-seo-page";
 import { siteConfig } from "@/lib/site-config";
@@ -112,7 +113,7 @@ export default function OQueAViaMaisNaoFazPage() {
             ],
           },
         ]}
-      />
+      ><div className="container"><ServiceVideo id="limites" /></div></LocalSeoPage>
     </>
   );
 }
